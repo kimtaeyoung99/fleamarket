@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/home/elements-icons-fe'=> 'home#elements-icons-fe'
   get '/home/elements-tabs' => 'home#elements-tabs'
   get '/home/pages-account' => 'home#pages-account'
+  get '/attend/register' => 'attend#register'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

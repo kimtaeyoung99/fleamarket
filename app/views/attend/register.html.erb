@@ -1,0 +1,173 @@
+<html>
+    <head>
+        <title>Rhythm &mdash; One & Multi Page Creative Theme</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta charset="utf-8">
+        <meta name="author" content="Roman Kirichik">
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+</head>
+<body class="appear-animate">
+<section class="page-section">
+                <div class="container relative">
+                    
+                    <h2 class="section-title font-alt mb-70 mb-sm-40">
+                        Different Types
+                    </h2>
+                    
+                    <!-- Row -->
+                    <div class="row">
+                        
+                        <!-- Col -->
+                        
+                        <div class="col-sm-4 mb-40">
+                            
+                            <!-- Form -->
+                            <form method="post" action="#" id="form" role="form" class="form">
+                                
+                                <div class="mb-20 mb-md-10">
+                                    <!-- Name -->
+                                    <input type="text" name="name" id="name" class="input-md form-control" placeholder="Name" maxlength="100">
+                                </div>
+                                
+                                <div class="mb-20 mb-md-10">
+                                    <!-- Email -->
+                                    <input type="email" name="email" id="email" class="input-md form-control" placeholder="Email" maxlength="100">
+                                </div>    
+                                
+                                <div class="mb-20 mb-md-10">
+                                    <!-- Password -->
+                                    <input type="password" name="password" id="password" class="input-md form-control" placeholder="Password" maxlength="100">
+                                </div>
+                                
+                                <div class="mb-20 mb-md-10">
+                                    <textarea name="text" id="text" class="input-md form-control" rows="8" placeholder="Text" maxlength="400"></textarea>
+                                </div>
+                                                            
+                            </form>
+							<!-- End Form -->
+                            
+                        </div>
+                        
+                        <!-- End Col -->
+                        
+                        <!-- Col -->
+                        
+                        <div class="col-sm-4 mb-40">
+                            
+                            <!-- Form -->
+                            <form method="post" action="#" id="form-1" role="form" class="form">
+                                
+                                <div class="mb-20 mb-md-10">
+                                    <select class="input-md form-control">
+                                        <option>One</option>
+                                        <option>Two</option>
+                                        <option>Three</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="mb-20 mb-md-10">
+                                    <select multiple class="form-control">
+                                        <option>One</option>
+                                        <option>Two</option>
+                                        <option>Three</option>
+                                        <option>Four</option>
+                                        <option>Five</option>
+                                    </select>
+                                </div>
+                                
+                                
+                                <div class="mb-20 mb-md-10">
+                                    <!-- Date-->
+                                    <input type="date" name="date" id="date" class="input-md form-control">
+                                </div>
+                                
+                                <div class="mb-20 mb-md-10">
+                                    <!-- Color-->
+                                    <input type="color" name="color" id="color" class="input-md form-control">
+                                </div>
+                                
+                                <div class="mb-20 mb-md-10">
+                                    <!-- Number -->
+                                    <input type="number" name="number" id="number" class="input-md form-control" placeholder="0" max="100">
+                                </div>   
+                                
+                            </form>
+							<!-- End Form -->
+                            
+                        </div>
+                        
+                        <!-- End Col -->
+                        
+                        <!-- Col -->
+                        
+                        <div class="col-sm-4 mb-40">
+                            
+                            <!-- Form -->
+                            <form method="post" action="#" id="form-2" role="form" class="form">
+                                
+                                <div class="mb-20 mb-md-10">
+                                    <input class="input-md form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+                                </div> 
+                                
+                                <div class="mb-20 mb-md-10">
+                                    <label for="exampleInputFile">
+                                        File input
+                                    </label>
+                                    
+                                    <input type="file" id="exampleInputFile" action="/create", method:'POST'>
+                                    <% @joins.each do |p| %>
+            <li><%= p.id%>. <%= p.content %>
+            <img src="<%= p.image.url %>">
+            </li>
+            <%end%>
+                                    <p class="help-block">
+                                        Example block-level help text here.
+                                    </p>
+                                </div>
+                                
+                                <div class="mb-20 mb-md-10">
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1">1
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" id="inlineCheckbox2" value="option2">2
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" id="inlineCheckbox3" value="option3">3
+                                    </label>
+                                </div>
+                                
+                                <div class="mb-20 mb-md-10">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">1
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">2
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">3
+                                    </label>
+                                </div>                                
+                                
+								
+                            </form>
+							<!-- End Form -->
+                            
+                        </div>
+                        
+                        <!-- End Col -->
+                        
+                    </div>
+                    <!-- End Row -->
+                    
+                </div>
+            </section>
+            <!-- End Section -->
+            
+            
+            <!-- Divider -->
+            <hr class="mt-0 mb-0 "/>
+</body>
+</html>
