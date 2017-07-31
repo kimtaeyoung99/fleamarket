@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   
   root 'home#special-fashion'
+  get '/home/elements-accordions' => 'home#elements-accordions'
+  get '/home/elements-buttons' => 'home#elements-buttons'
+  get '/home/elements-forms' => 'home#elements-forms'
+  get '/home/elements-icons-et' => 'home#elements-icons-et'
+  get '/home/elements-icons-fe'=> 'home#elements-icons-fe'
+  get '/home/elements-tabs' => 'home#elements-tabs'
+  get '/home/pages-account' => 'home#pages-account'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
