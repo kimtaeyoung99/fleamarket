@@ -286,8 +286,8 @@
     
     function init_scroll_navigate(){
         
-        $(".local-scroll").localScroll({
-            target: "body",
+        $(".local-scroll").localScroll({target: "body",
+            
             duration: 1500,
             offset: 0,
             easing: "easeInOutExpo"
