@@ -1,29 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta charset="utf-8">
+  <meta name="author" content="Roman Kirichik">
+  <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  
+  
+  <!-- Favicons -->
+  <link rel="shortcut icon" src="/assets/favicon.png">
 
 
-<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-<!-- 부가적인 테마 -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-
+  <!-- 부가적인 테마 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
   
-  <title>Flea Market Project</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/style-responsive.css">
+  <link rel="stylesheet" href="assets/animate.min.css">
+  <link rel="stylesheet" href="assets/vertical-rhythm.min.css">
+  <link rel="stylesheet" href="assets/owl.carousel.css">
+  <link rel="stylesheet" href="assets/magnific-popup.css">  
+  
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
+
 <body>
+<%= render partial: "shared/nav" %>
 
 <%= yield %>
 
 <%= render partial: "shared/footer" %>
 
-
+<!-- JS -->
+        <script type="text/javascript" src="assets/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="assets/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="assets/bootstrap.min.js"></script>        
+        <script type="text/javascript" src="assets/SmoothScroll.js"></script>
+        <script type="text/javascript" src="assets/jquery.scrollTo.min.js"></script>
+        <script type="text/javascript" src="assets/jquery.localScroll.min.js"></script>
+        <script type="text/javascript" src="assets/jquery.viewport.mini.js"></script>
+        <script type="text/javascript" src="assets/jquery.countTo.js"></script>
+        <script type="text/javascript" src="assets/jquery.appear.js"></script>
+        <script type="text/javascript" src="assets/jquery.sticky.js"></script>
+        <script type="text/javascript" src="assets/jquery.parallax-1.1.3.js"></script>
+        <script type="text/javascript" src="assets/jquery.fitvids.js"></script>
+        <script type="text/javascript" src="assets/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="assets/isotope.pkgd.min.js"></script>
+        <script type="text/javascript" src="assets/imagesloaded.pkgd.min.js"></script>
+        <script type="text/javascript" src="assets/jquery.magnific-popup.min.js"></script>
+        <!-- Replace test API Key "AIzaSyAZsDkJFLS0b59q7cmW0EprwfcfUA8d9dg" with your own one below 
+        **** You can get API Key here - https://developers.google.com/maps/documentation/javascript/get-api-key -->
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZsDkJFLS0b59q7cmW0EprwfcfUA8d9dg"></script>
+        <script type="text/javascript" src="assets/gmap3.min.js"></script>
+        <script type="text/javascript" src="assets/wow.min.js"></script>
+        <script type="text/javascript" src="assets/masonry.pkgd.min.js"></script>
+        <script type="text/javascript" src="assets/jquery.simple-text-rotator.min.js"></script>
+        <script type="text/javascript" src="assets/all.js"></script>
+        <script type="text/javascript" src="assets/contact-form.js"></script>
+        <script type="text/javascript" src="assets/jquery.ajaxchimp.min.js"></script>        
+        <!--[if lt IE 10]><script type="text/javascript" src="assets/placeholder.js"></script><![endif]-->
 </body>
 </html>
