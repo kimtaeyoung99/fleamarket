@@ -242,9 +242,10 @@
 			new TiltFx(img, JSON.parse(img.getAttribute('data-tilt-options')));
 		});
 	}
-    $(".tilt-wrap").imagesLoaded(function(){
+    jQery(".tilt-wrap").imagesLoaded(function(){
         init();
     });
 	window.TiltFx = TiltFx;
 
 })(window);
+(jQuery);
