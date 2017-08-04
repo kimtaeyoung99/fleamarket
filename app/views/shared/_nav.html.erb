@@ -1,6 +1,6 @@
 
 <!-- Navigation panel -->
-            <nav class="main-nav js-stick">
+            <nav class="main-nav js-stick" >
                 <div class="container">
                 <div class="full-wrapper relative clearfix">
                     <!-- Logo ( * your text or image into link tag *) -->
@@ -15,7 +15,9 @@
                     
                     <!-- Main Menu -->
                     <div class="inner-nav desktop-nav">
-                        <ul class="clearlist">
+                        <ul class="clearlist" style="font-size: 16px !important;
+													font-weight: bold !important;
+													">
                             
                             <!-- Item With Sub -->
                             <li>
@@ -36,7 +38,7 @@
                             
                             <!-- Item With Sub -->
                             <li>
-                                <a href="#" class="mn-has-sub ">참가신청 <i class="fa fa-angle-down"></i></a>
+                                <a href="/attend/register">참가신청 </a>
                                 
                                 
                             </li>
@@ -52,32 +54,22 @@
                             
                             <!-- Item With Sub -->
                             <% if user_signed_in? %>
-                            <li>
-                                <a class="mn-has-sub">반갑습니다  <i class="fa fa-angle-down"></i></a>
-                                
-                                <ul class="mn-sub to-left">
-                                    
-                                    <li>
-                                        <a><%= current_user.name %><br /><br />으로 로그인 함</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-columns-3col.html">프로필</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-columns-4col.html">4 Columns</a>
-                                    </li>
-                                    <li>
-                                        <a href="/users/edit">회원정보 수정</a>
-                                    </li>
-                                    <li>
-                                        <a href="/users/sign_out">로그아웃</a>
-                                    </li>
-                                    
-                                </ul>
-
-
-                                
-                            </li>
+                            <li class="dropdown">
+					          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+					          	반갑습니다 <span class="caret"></span></a>
+					          <ul class="dropdown-menu" role="menu">
+					            <span class="navbar-text" style="padding-left: 24px;">
+					            <strong><%= current_user.name %></strong><br /> 으로 로그인 함</span>
+					            <li class="divider"></li>
+					            
+					            <li><a href="#">프로필</a></li>
+					            <li><a href="#">Something else here</a></li>
+					            
+					            <li class="divider"></li>
+					            <li><a href="/users/edit">회원정보 수정</a></li>
+					            <li><a href="/users/sign_out">로그아웃</a></li>
+					          </ul>
+        					</li>
                             
                             <% else %>
                             <li>
