@@ -1,0 +1,69 @@
+<div class="container">
+  
+  <h2><%= @question.title %></h2>
+  <hr>
+  
+  <p><strong>내용</strong></p>
+  <p><%= @question.content %></p>
+  <hr>
+  
+  <p><strong>작성자</strong></p>
+  <p><%= @question.user.name %></p>
+  <hr>
+  <% if can? :update, @question %>
+    <%= link_to 'Edit', edit_question_path(@question) %> |
+  <% end %>
+  <%= link_to 'Back', questions_path %> |
+  <% if can? :delete, @question %>
+  <%= link_to 'Destroy', @question, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+  <hr>
+  <p><strong>댓글작성</strong></p>
+  <div class="well">
+    <form action="/questions/<%=@question.id%>" method="post">
+      <div class="form-group">
+        <input type="hidden" value="<%=current_user.id%>" name="user_id"></input>
+        <input type="hidden" value="<%=@question.id%>" name="question_id"></input>
+        <textarea class="form-control" rows="5" name="questionreply"></textarea>
+      </div>
+      <button type="submit" class="btn btn-default">댓글작성!</button>
+    </form>
+  </div>
+  <hr>
+  <p><strong>댓글목록</strong></p>
+  <% @questionreplys = @question.questionreplys.all.reverse %>
+  <% @questionreplys.each do |c| %>
+  <div class="well">
+  <p class="original-questionreply" id="<%=c.id %>">작성자 : <%= c.user.email %></p>
+  <p class="original-questionreply" id="<%=c.id %>">내용 : <%= c.questionreply %></p>
+  <div class="edit-questionreply-<%=c.id%>" style="display:none;">
+    <form action="/questions/<%=@question.id%>/questionreplys/<%=c.id%>" method="post">
+      <div class="form-group">
+        <input type="hidden" value="<%=current_user.id%>" name="user_id"></input>
+        <input type="hidden" value="<%=@question.id%>" name="question_id"></input>
+        <textarea class="form-control" rows="5" name="questionreply"><%=c.questionreply %></textarea>
+      </div>
+      <button type="submit" class="btn btn-default">수정완료!</button>
+    </form>
+    </br>
+  </div>
+  <div class="edit-questionreply-<%=c.id%>-button-group">
+    <% if can? :update, c %>
+    <button class="btn btn-default edit-button" id="edit-questionreply-<%=c.id %>">수정</button>
+    <% end %>
+    <% if can? :delete, c %>
+    <a href="/questions/<%=@question.id%>/questionreplys/<%=c.id%>" data-method="delete" class="btn btn-default">삭제</a>
+    <% end %>
+  </div>
+  </div>
+  <% end %>
+</div>
+
+<script>
+  $(".edit-button").click(function() {
+    var clickedID = this.id;
+    $("."+clickedID).css("display","block");
+    $("."+clickedID+"-button-group").css("display","none");
+  });
+  
+</script>

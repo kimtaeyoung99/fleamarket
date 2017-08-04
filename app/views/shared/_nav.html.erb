@@ -1,14 +1,14 @@
+
 <!-- Navigation panel -->
-            <nav class="main-nav dark transparent stick-fixed">
+            <nav class="main-nav js-stick">
+                <div class="container">
                 <div class="full-wrapper relative clearfix">
-                    
                     <!-- Logo ( * your text or image into link tag *) -->
                     <div class="nav-logo-wrap local-scroll">
-                        <a href="mp-index.html" class="logo">
-                            <img src="assets/logo-white.png" alt="" />
+                        <a href="/" class="logo">
+                           Flea
                         </a>
                     </div>
-                    
                     <div class="mobile-nav">
                         <i class="fa fa-bars"></i>
                     </div>
@@ -19,106 +19,91 @@
                             
                             <!-- Item With Sub -->
                             <li>
-                                <a href="#" class="mn-has-sub active">Home <i class="fa fa-angle-down"></i></a>
+                                <a href="#" class="mn-has-sub">공지사항 <i class="fa fa-angle-down"></i></a>
                                 
-                                <!-- Sub Multilevel -->
-                               
-                                <!-- End Sub Multilevel -->
                                 
                             </li>
                             <!-- End Item With Sub -->
                             
                             <!-- Item With Sub -->
                             <li>
-                                <a href="#" class="mn-has-sub">Pages <i class="fa fa-angle-down"></i></a>
+                                <a href="#" class="mn-has-sub">이번 주 참가현황 <i class="fa fa-angle-down"></i></a>
                                 
-                                <!-- Sub Multilevel -->
-                               
-                                <!-- End Sub Multilevel -->
+                                
                                 
                             </li>
                             <!-- End Item With Sub -->
                             
                             <!-- Item With Sub -->
                             <li>
-                                <a href="#" class="mn-has-sub">Elements <i class="fa fa-angle-down"></i></a>
+                                <a href="#" class="mn-has-sub ">참가신청 <i class="fa fa-angle-down"></i></a>
                                 
-                                <!-- Sub Multilevel -->
-                                
-                                <!-- End Sub Multilevel -->
                                 
                             </li>
                             <!-- End Item With Sub -->
                             
                             <!-- Item With Sub -->
                             <li>
-                                <a href="#" class="mn-has-sub">Portfolio <i class="fa fa-angle-down"></i></a>
+                                <a href="/questions" class="mn-has-sub">Q & A <i class="fa fa-angle-down"></i></a>
                                 
-                                <!-- Sub -->
-                                
-                                <!-- End Sub -->
                                 
                             </li>
                             <!-- End Item With Sub -->
                             
                             <!-- Item With Sub -->
+                            <% if user_signed_in? %>
                             <li>
-                                <a href="#" class="mn-has-sub">Blog <i class="fa fa-angle-down"></i></a>
+                                <a class="mn-has-sub">반갑습니다  <i class="fa fa-angle-down"></i></a>
                                 
-                                <!-- Sub -->
-                               
-                                <!-- End Sub -->
-                                
-                            </li>
-                            <!-- End Item With Sub -->
-                            
-                            <!-- Item With Sub -->
-                            <li>
-                                <a href="#" class="mn-has-sub">Shop <i class="fa fa-angle-down"></i></a>
-                                
-                                <!-- Sub -->
-                                
-                                <!-- End Sub -->
-                                
-                            </li>
-                            <!-- End Item With Sub -->
-                            
-                            <!-- Divider -->
-                            <li><a>&nbsp;</a></li>
-                            <!-- End Divider -->
-                            
-                            <!-- Search -->
-                            <li>
-                                <a href="#" class="mn-has-sub"><i class="fa fa-search"></i> Search</a>
-                                
-                                <ul class="mn-sub">
+                                <ul class="mn-sub to-left">
                                     
                                     <li>
-                                        <div class="mn-wrap">
-                                            <form method="post" class="form">
-                                                <div class="search-wrap">
-                                                    <button class="search-button animate" type="submit" title="Start Search">
-                                                        <i class="fa fa-search"></i>
-                                                    </button>
-                                                    <input type="text" class="form-control search-field" placeholder="Search...">
-                                                </div>
-                                            </form>
-                                        </div>
+                                        <a><%= current_user.name %><br /><br />으로 로그인 함</a>
+                                    </li>
+                                    <li>
+                                        <a href="shop-columns-3col.html">프로필</a>
+                                    </li>
+                                    <li>
+                                        <a href="shop-columns-4col.html">4 Columns</a>
+                                    </li>
+                                    <li>
+                                        <a href="/users/edit">회원정보 수정</a>
+                                    </li>
+                                    <li>
+                                        <a href="/users/sign_out">로그아웃</a>
                                     </li>
                                     
                                 </ul>
+
+
                                 
                             </li>
-                            <!-- End Search -->
                             
-                            <!-- Cart -->
+                            <% else %>
+                            <li>
+                                <a href="/users/sign_in">로그인</a>
+                                
+                                
+                                
+                            </li>
+                            <!-- End Item With Sub -->
                             
-                            <!-- End Languages -->
+                            <!-- Item With Sub -->
+                            <li>
+                                <a href="/users/sign_up" class="active">회원가입</a>
+                                
+                            </li>
+                            <!-- End Item With Sub -->
+                            <% end %>
                             
+                           
                         </ul>
                     </div>
                     <!-- End Main Menu -->
                     
+
+                </div>
                 </div>
             </nav>
             <!-- End Navigation panel -->
+            

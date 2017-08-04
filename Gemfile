@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+
+gem "cancancan", '~> 1.10'
+gem 'rails_db'
+gem 'devise'
+gem 'devise-bootstrap-views'
 gem "font-awesome-rails"
 gem 'carrierwave', '~> 1.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
   
+ 
+  resources :questions
+  devise_for :users
   root 'home#special-fashion'
+  
+  
+  post '/questions/:question_id' =>"questionreplys#create"
+  delete '/questions/:question_id/questionreplys/:id' =>"questionreplys#destroy"
+  
+  post '/questions/:question_id/questionreplys/:id' =>"questionreplys#update"
+  
   get '/home/elements-accordions' => 'home#elements-accordions'
   get '/home/elements-buttons' => 'home#elements-buttons'
   get '/home/elements-forms' => 'home#elements-forms'
